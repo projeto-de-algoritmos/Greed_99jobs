@@ -16,6 +16,9 @@ const App = () => {
         <h2 className="header">Coloque aqui seus trabalhos</h2>
         <ItemForm updateJobs={updateJobs}/>
       </Jumbotron>
+      <h3> Jobs Listing </h3>
+      <JobsTable jobs={jobs}/>
+      <h3> Schedule </h3>
     </Container>
   );
 };
