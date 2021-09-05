@@ -1,5 +1,6 @@
 import React, { useState} from 'react';
 import './App.css';
+import JobsTable from './JobsTable';
 import {Job} from './interval';
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
     <Container className="p-3">
       <Jumbotron>
         <h2 className="header">Coloque aqui seus trabalhos</h2>
+        <ItemForm updateJobs={updateJobs}/>
       </Jumbotron>
     </Container>
   );
