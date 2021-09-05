@@ -1,5 +1,7 @@
 import React, { useState} from 'react';
 import './App.css';
+import {Job} from './interval';
+
 const App = () => {
   const [jobs, setJobs] = useState([]);
   const updateJobs = (newJob) => {
