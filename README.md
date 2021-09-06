@@ -1,6 +1,7 @@
 # Greed_99Jobs
 
 **Número da Lista**: 3
+
 **Conteúdo da Disciplina**: Algoritmos ambiciosos
 
 ## Alunos
@@ -30,7 +31,11 @@ Entao é mais lucrativo fazer a tarefa 1 e 3 e não fazer a tarefa 2.
 ```
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+![](https://i.imgur.com/pbUypQj.png)
+
+![](https://i.imgur.com/cuEzn3o.png)
+
+![](https://i.imgur.com/iWsLkes.png)
 
 ## Instalação 
 **Linguagem**: Javascript
