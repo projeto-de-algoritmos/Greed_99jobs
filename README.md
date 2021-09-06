@@ -1,45 +1,52 @@
-**!! Atenção: Renomeie o seu repositório para (Tema)_(NomeDoProjeto). !!** 
+# Greed_99Jobs
 
-Temas:
- - Grafos1
- - Grafos2
- - PD
- - D&C
- - Greed
- - Final 
- 
- **!! *Não coloque os nomes dos alunos no título do repositório*. Exemplo de título correto: Grafos2_Labirinto-do-Minotauro !!**
- 
- (Apague essa seção)
-
-# NomedoProjeto
-
-**Número da Lista**: X<br>
-**Conteúdo da Disciplina**: XXXXXXXXXX<br>
+**Número da Lista**: 3
+**Conteúdo da Disciplina**: Algoritmos ambiciosos
 
 ## Alunos
 |Matrícula | Aluno |
 | -- | -- |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| 15/0129807  |  Ícaro Pereira de Oliveira |
+| 14/0058371  |  Augusto Moreno Vilarins |
 
 ## Sobre 
-Descreva os objetivos do seu projeto e como ele funciona. 
+Esse projeto é um gerenciador de tarefas, onde você pode adicionar tarefas com seus respectivos lucros e deadlines, e verificar
+quais são as mais lucrativas a serem feitas de acordo com os dados inseridos.
+
+Nesse projeto, consideramos o tempo em unidades inteiras. E que a linha do tempo inicia em zero.
+
+Exemplo: 
+Tarefa 1 - Deadline: 1 - Lucro: 20
+Tarefa 2 - Deadline: 2 - Lucro: 10
+Tarefa 3 - Deadline: 2 - Lucro: 100
+
+Entao é mais lucrativo fazer a tarefa 1 e 3 e não fazer a tarefa 2.
+```
+0 - 1 - 2 - 3
+=T1=|====T3=== 
+```
 
 ## Screenshots
 Adicione 3 ou mais screenshots do projeto em funcionamento.
 
 ## Instalação 
-**Linguagem**: xxxxxx<br>
-**Framework**: (caso exista)<br>
+**Linguagem**: Javascript
+**Framework**: React
+
 Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
+* NodeJS v12 ou superior
 
-## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
+## Uso
 
-## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
+Para instalar, você pode usar yarn ou NPM:
+```
+{yarn,npm} install
+```
 
+Para rodar, você pode usar yarn ou NPM:
+```
+{yarn,npm} run start
+```
 
 
 
