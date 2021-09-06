@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 
 const ItemForm = ({ updateJobs }) => {
-  const initialInputState = { name: "job", profit: 0, deadline: 1 };
+  const initialInputState = { name: "job", profit: 1, deadline: 1 };
   const [eachEntry, setEachEntry] = useState(initialInputState);
 
   const handleInputChange = (e) => {
@@ -38,7 +38,7 @@ const ItemForm = ({ updateJobs }) => {
       </Form.Group>
 
       <Form.Group>
-        <Form.Label>Daqui quantas horas precisa estar completa: </Form.Label>
+        <Form.Label>Deadline: </Form.Label>
         <Form.Control
           placeholder={eachEntry.deadline}
           name="deadline"
@@ -49,7 +49,7 @@ const ItemForm = ({ updateJobs }) => {
       </Form.Group>
 
         <Button onClick={onSubmit} className="btn btn-primary" style={{marginTop: '5px'}}>
-          Adicionar
+          Add
         </Button>
     </Form>
   );

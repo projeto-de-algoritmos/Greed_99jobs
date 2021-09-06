@@ -1,3 +1,5 @@
+const {Heap} = require('heap-js');
+
 class Job {
     constructor(name, deadline, profit) {
         this.id =  '_'+Math.random().toString(36).substr(2, 9);
@@ -7,26 +9,34 @@ class Job {
     }
 }
 
-const scheduleJobs = (jobs, T) => {
-    let profit = 0;
-    let slot = new Array(T).fill(-1);
-    jobs.sort((a, b) => b.profit - a.profit);
-    for (let job of jobs) {
-        for (let j = job.deadline - 1; j >= 0; j--) {
-            if (j < T && slot[j] == -1) {
-                slot[j] = job.id;
-                profit += job.profit;
-                break;
-            }
+const scheduleJobs = (jobs) => {
+    const sortedJobs = jobs.slice().sort((a, b) => a.deadline - b.deadline);
+    const maxHeap = new Heap((a, b) => b.deadline - a.deadline);
+    const result = [];
+
+    for (let i = jobs.length - 1; i >= 0; i--) {
+        let slots = 0;
+        if (i === 0) {
+            slots = sortedJobs[i].deadline;
+        }
+        else {
+            slots = sortedJobs[i].deadline - sortedJobs[i - 1].deadline;
+        }
+        maxHeap.push({
+            profit: -sortedJobs[i].profit,
+            ...sortedJobs[i]
+        });
+        while (slots && maxHeap.size()) {
+            const job = maxHeap.pop();
+            slots--;
+            result.push(job);
         }
     }
-    const jobsIds = slot.filter(val => val != -1).map(val => val);
-    const scheduledJobs = jobsIds.map(id => jobs.find(job => job.id == id));
-
+    result.sort((a, b) => a.deadline - b.deadline);
     return {
-        scheduledJobs,
-        profit
-    }
+        scheduledJobs: result,
+        profit: result.reduce((acc, job) => acc + job.profit, 0)
+    };
 }
 
 module.exports = {
