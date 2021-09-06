@@ -16,9 +16,12 @@ quais são as mais lucrativas a serem feitas de acordo com os dados inseridos.
 Nesse projeto, consideramos o tempo em unidades inteiras. E que a linha do tempo inicia em zero.
 
 Exemplo: 
-Tarefa 1 - Deadline: 1 - Lucro: 20
-Tarefa 2 - Deadline: 2 - Lucro: 10
-Tarefa 3 - Deadline: 2 - Lucro: 100
+
+* Tarefa 1 - Deadline: 1 - Lucro: 20
+
+* Tarefa 2 - Deadline: 2 - Lucro: 10
+
+* Tarefa 3 - Deadline: 2 - Lucro: 100
 
 Entao é mais lucrativo fazer a tarefa 1 e 3 e não fazer a tarefa 2.
 ```
