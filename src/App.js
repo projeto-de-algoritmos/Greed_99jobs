@@ -32,7 +32,7 @@ const App = () => {
   return (
     <Container className="p-3">
       <Jumbotron>
-        <h2 className="header">Job Scheduler</h2>
+        <h2 className="header">99jobs</h2>
         <h3>Jobs</h3>
         <ItemForm updateJobs={updateJobs} />
       </Jumbotron>
